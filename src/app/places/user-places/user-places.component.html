@@ -1,0 +1,6 @@
+<app-places-container title="Your Favorite Places">
+  
+    <app-places *ngIf="places" [places]="places()!" (selectedPlace)="onRemovePlace($event)" />
+    <p *ngIf="places()?.length === 0" class="fallback-text">Unfortunately, no places could be found.</p>
+  </app-places-container>
+  

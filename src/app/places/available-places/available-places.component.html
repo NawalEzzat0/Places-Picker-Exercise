@@ -1,0 +1,5 @@
+<app-places-container title="Available Places">
+  <div class="lds-ellipsis" *ngIf="isFetching"><div></div><div></div><div></div><div></div></div>
+  <app-places *ngIf="places" [places]="places!" (selectedPlace)="onSelectPlace($event)" />
+  <p *ngIf="places?.length === 0" class="fallback-text">Unfortunately, no places could be found.</p>
+</app-places-container>
